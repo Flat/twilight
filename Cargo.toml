@@ -1,5 +1,7 @@
 [workspace]
 members = [
+    "audio",
+    "audio/examples/shard",
     "cache/base",
     "cache/in-memory",
     "cache/trait",

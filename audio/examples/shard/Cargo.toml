@@ -1,0 +1,15 @@
+[package]
+authors = ["Valdemar Erk <valdemar@erk.io>"]
+edition = "2018"
+name = "twilight-audio-example-shard"
+version = "0.1.0"
+
+[dependencies]
+twilight-audio = {path = "../.."}
+twilight-gateway = { path = "../../../gateway" }
+twilight-model = { path = "../../../model" }
+futures = "0.3"
+pretty_env_logger = "0.3"
+tokio = { version = "0.2", features = ["macros", "rt-core"] }
+serde_json = "1"
+tungstenite = "0.10"

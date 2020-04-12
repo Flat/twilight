@@ -1,0 +1,39 @@
+[package]
+authors = ["Valdemar Erk <valdemar@erk.io>"]
+documentation = "https://docs.rs/twilight-audio"
+edition = "2018"
+homepage = "https://github.com/twilight-rs/twilight"
+include = ["src/*.rs", "Cargo.toml"]
+keywords = ["discord", "discord-api", "twilight"]
+license = "ISC"
+name = "twilight-audio"
+publish = false
+readme = "README.md"
+repository = "https://github.com/twilight-rs/twilight.git"
+version = "0.1.0"
+
+[dependencies]
+twilight-http = { path = "../http" }
+twilight-model = { path = "../model" }
+futures = "0.3"
+log = "0.4"
+serde = { features = ["derive"], version = "1" }
+serde_json = "1"
+serde-value = "0.6"
+# Make it use less features at a later time.
+tokio = { version = "0.2", features = ["full"] }
+tokio-tungstenite = { version = "0.10.1", features = ["tls"] }
+url = "2"
+rand = { version = "0.7", default-features = false, features = ["small_rng"]}
+flume = "0.7.1"
+audiopus = "0.2"
+
+
+#optional
+metrics = { version = "0.12.1", optional = true }
+
+[dev-dependencies]
+tokio = "0.2"
+
+[features]
+default = []
