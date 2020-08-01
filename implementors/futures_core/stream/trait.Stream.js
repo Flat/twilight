@@ -1,0 +1,4 @@
+(function() {var implementors = {};
+implementors["twilight_gateway"] = [{"text":"impl Stream for Events","synthetic":false,"types":[]}];
+implementors["twilight_standby"] = [{"text":"impl Stream for WaitForEventStream","synthetic":false,"types":[]},{"text":"impl Stream for WaitForGuildEventStream","synthetic":false,"types":[]},{"text":"impl Stream for WaitForMessageStream","synthetic":false,"types":[]},{"text":"impl Stream for WaitForReactionStream","synthetic":false,"types":[]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()
