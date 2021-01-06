@@ -161,21 +161,29 @@ impl Inflater {
             return;
         }
 
-        self.compressed.shrink_to_fit();
-        self.buffer.shrink_to_fit();
-
-        tracing::trace!(
+        // Set to debug temporarily
+        tracing::debug!(
             capacity = self.compressed.capacity(),
             shard_id = self.shard[0],
             shard_total = self.shard[1],
             "compressed capacity",
         );
-        tracing::trace!(
+        tracing::debug!(
             capacity = self.buffer.capacity(),
             shard_id = self.shard[0],
             shard_total = self.shard[1],
             "buffer capacity",
         );
+        tracing::debug!(
+            capacity = self.internal_buffer.capacity(),
+            shard_id = self.shard[0],
+            shard_total = self.shard[1],
+            "internal buffer capacity",
+        );
+
+        self.buffer = Vec::new();
+        self.compressed = Vec::new();
+        self.internal_buffer = Vec::new();
 
         self.last_resize = Instant::now();
     }
