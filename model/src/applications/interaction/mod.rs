@@ -219,7 +219,7 @@ mod test {
 }"#;
 
         let expected = Interaction::ApplicationCommand(Box::new(ApplicationCommandInner {
-            guild_id: 300.into(),
+            guild_id: Some(300.into()),
             channel_id: 600.into(),
             member: Some(PartialMember {
                 user: Some(User {
